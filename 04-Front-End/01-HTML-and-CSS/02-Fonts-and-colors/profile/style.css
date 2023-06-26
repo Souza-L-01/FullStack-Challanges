@@ -1,0 +1,17 @@
+body{
+    background-color: rgb(140,117,192);
+    font-family: 'Braah One', sans-serif;
+    font-family: 'Noto Sans', sans-serif;   
+    font-size: 30px; 
+}
+h1{
+    color: #e89803;
+}
+
+h2{
+    color: #f9ab1a;
+}
+
+p{
+    color: #f8c462;
+}

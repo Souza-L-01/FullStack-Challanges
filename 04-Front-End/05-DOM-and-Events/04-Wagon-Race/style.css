@@ -1,0 +1,26 @@
+/* Your board style here */
+.race-table{
+    border-spacing: 10px;
+    border-collapse: separate;
+    margin: auto;
+}
+
+.race-table td {
+    text-align: center;
+    width: calc(100% / 12); /* Assuming 3 elements per row */
+    padding: 10px;
+    border: 1px solid black
+}
+
+.race-table td.active {
+background-size: 100%;
+background-repeat: no-repeat;
+}
+
+#player1-race td:last-child.active {
+    background-image: url(images/player_1.png), url('images/finish.png');
+  }
+  
+  #player2-race td:last-child.active {
+    background-image: url(images/player_2.png), url('images/finish.png');
+  }

@@ -1,0 +1,14 @@
+.flex-grid{
+    display: flex;
+}
+
+.cards-grid{
+    flex-grow: 1 ; 
+}
+
+#map {
+    height: 100vh;
+    position: sticky;
+    top: 0;
+    /* border-radius: 1%; */
+  }

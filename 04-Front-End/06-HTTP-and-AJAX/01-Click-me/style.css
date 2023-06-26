@@ -1,0 +1,26 @@
+  .outer-div {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    background-color: yellow; /* Color for space between border and margin */
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    margin: 20px; /* Adjust the margin value as needed */
+    border: 2px solid red;
+  }
+  
+  .inner-div {
+    background-color: rgb(164, 68, 188); /* Color for space between padding and border */
+    padding: 10px;
+  }
+  
+  .content-div {
+    background-color: blue; /* Color for space between content and padding */
+  }
+
+
+

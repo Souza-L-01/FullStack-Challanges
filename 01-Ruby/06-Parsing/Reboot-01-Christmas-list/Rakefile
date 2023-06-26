@@ -1,0 +1,14 @@
+desc "Look for style guide offenses in your code"
+task :rubocop do
+  sh "rubocop --format simple || true"
+end
+
+task default: :rubocop
+
+# interface.rb
+
+# Pseudo-code:
+# 1. Welcome
+# 2. Display menu (list / add / delete / mark )
+# 3. Get user action
+# 4. Perform the right action

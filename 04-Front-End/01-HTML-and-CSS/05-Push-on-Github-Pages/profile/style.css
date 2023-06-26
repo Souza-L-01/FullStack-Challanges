@@ -1,0 +1,58 @@
+body{
+    background-color: rgb(140,117,192);
+    font-family: 'Braah One', sans-serif;
+    font-family: 'Noto Sans', sans-serif;   
+    font-size: 30px; 
+}
+
+#image-profile {
+    border-radius: 50%;
+    /* width: 10px */
+}
+
+@media (max-width: 960px){
+    .container {
+    margin: 0 auto;
+    width: 600px;
+    }
+    
+    #image-profile {
+        width: 10px
+    }
+}
+
+.container {
+    margin: 0 auto;
+    width: 600px;
+    text-align: center;
+    background-color: #9c8ebc;
+    border: 5px solid #b37121;
+    border-radius: 5px;
+    box-shadow: 100px 100px 100px rgba(225, 161, 231, 0.3);
+    padding: 40px;
+}
+
+.card {
+    background-color: rgba(0, 128, 255, 0.3);
+    border: 1px solid #d3d3d3;
+    border-radius: 100px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+}
+
+.list-inline {
+    margin: 0 auto;
+    list-style: none;
+    padding-left: 0px;
+    text-align: center;
+}
+ 
+h1, h2, p {
+    color: #774d00;
+    font-size: 30px
+}
+
+a:hover {
+    background-color: yellow;
+    border-radius: 100px;
+  }

@@ -1,0 +1,25 @@
+body {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background-color: blueviolet;
+}
+
+#container {
+  height: 50vh;
+  width: 50vh;
+  background-color: aqua;
+}
+
+#container input {
+  width: 99%;
+  height: 32px;
+  line-height: 32px;
+  font-size: 34px;
+  padding: 10 4px;
+  background-color:rgb(247, 194, 229);
+}
+
+#results{
+font-size: 2em;}
