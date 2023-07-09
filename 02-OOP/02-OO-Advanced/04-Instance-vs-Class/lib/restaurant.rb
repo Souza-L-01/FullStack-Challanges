@@ -18,8 +18,9 @@ class Restaurant
   end
 
   def rate(rating)
-    @ratings << rating
-    @average_rating = @ratings.sum.to_f / @ratings.length
+    @number_of_ratings += 1
+    @sum_of_ratings += rating
+    @average_rating = @sum_of_ratings.to_f / @number_of_ratings
   end
 end
 
