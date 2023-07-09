@@ -1,20 +1,22 @@
 class Restaurant
   # TODO: add relevant accessors if necessary
-  attr_reader :name, :city, :average_rating
+  attr_reader :city, :average_rating
+
   def initialize(city, name)
     # TODO: implement constructor with relevant instance variables
     @city = city
     @name = name
-    @ratings = []
-    # @average_rating = nil
+    @number_of_ratings = 0
+    @sum_of_ratings = 0    # @average_rating = nil
   end
   # TODO: implement .filter_by_city and #rate methods
   def self.filter_by_city(restaurants, city)
     # restaurants.select {|restaurant| city == restaurant.city}
     restaurants.select do |restaurant|
-      restaurant.city
+      restaurant.city == city
     end
   end
+
   def rate(rating)
     @ratings << rating
     @average_rating = @ratings.sum.to_f / @ratings.length
