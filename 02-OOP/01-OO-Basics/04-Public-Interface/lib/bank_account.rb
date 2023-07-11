@@ -53,6 +53,8 @@ class BankAccount
 
   def iban
     # TODO: Hide the middle of the IBAN like FR14**************606 and return it
+    iban = @iban.split("_")
+    "#{iban.first}#{'*' * 14}#{iban.last}"
   end
 
   def to_s
