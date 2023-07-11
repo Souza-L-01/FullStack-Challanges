@@ -28,11 +28,15 @@ class BankAccount
   def withdraw(amount)
     # TODO: Call add_transaction with the right argument
     # TODO: returns a string with a message
+    add_transaction(-amount)
+    "You have withdrawn #{amount} euros"
   end
 
   def deposit(amount)
     # TODO: Call add_transaction with the right argument
     # TODO: returns a string with a message
+    add_transaction(amount)
+    "You have made a deposit of #{amount} euros"
   end
 
   def transactions_history(args = {})
