@@ -60,6 +60,7 @@ class BankAccount
   def to_s
     # Method used when printing account object as string (also used for string interpolation)
     # TODO: return a string with the account owner, the hidden iban and the balance of the account
+    "Owner: #{name} - IBAN #{iban} - Balance: #{balance} euros"
   end
 
   private
@@ -67,5 +68,7 @@ class BankAccount
   def add_transaction(amount)
     # TODO: add the amount in the transactions array
     # TODO: update the current balance (which represents the balance of the account)
+    @transactions << Transaction.new(amount)
+    @balance += amount
   end
 end
