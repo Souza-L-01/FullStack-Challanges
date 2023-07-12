@@ -28,4 +28,24 @@ class Controller
         @repo.add(post)
     end
 
+    def show
+        list
+        index = @view.ask_user_for_index
+        post = @repo.find(index)
+        @view.display_content(post)
+    end
+
+    def mark_as_read
+        list
+        index = @view.ask_user_for_index
+        @repo.mark_as_read(index)
+        list
+    end
+
+    private
+
+    def list
+        posts = @repo.all
+        @view.display(posts)
+    end
 end
