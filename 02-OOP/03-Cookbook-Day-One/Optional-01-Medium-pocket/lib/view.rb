@@ -12,4 +12,13 @@ class View
 		return gets.chomp
 	end
 
+	def ask_user_for_index
+		puts "Index?"
+		puts "> "
+		return gets.chomp.tp_i - 1
+	end
+
+	def display_content(post)
+		puts post
+	end
 end
