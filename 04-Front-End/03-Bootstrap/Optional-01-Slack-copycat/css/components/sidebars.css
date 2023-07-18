@@ -22,3 +22,30 @@
 	border-radius: 4px;
 }
 
+.conversations-sidebar {
+	background-color: #4B3949;
+	color: white;
+	padding: 16px;
+	width: 200px;
+	flex-shrink: 0;
+}
+
+.conversations-sidebar h1 {
+	font-size: 24px;
+}
+
+.chat-section {
+	margin-top: 24px;
+}
+
+.chat-section-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.chat-section-header h3 {
+	font-size: 16px;
+	margin: 0;
+}
+
