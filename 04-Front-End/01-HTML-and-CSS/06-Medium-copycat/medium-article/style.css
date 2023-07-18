@@ -20,3 +20,36 @@ a {
 text-decoration: none;
 color: #4352A1;
 }
+h1, h2 {
+font-family: 'Montserrat', sans-serif;
+font-weight: bold;
+}
+h2 {
+color: #A0A0A0;
+font-weight: normal;
+}
+a {
+text-decoration: none;
+color: #4352A1;
+}
+
+/* Custom design */
+.banner {
+background-image: url("http://unsplash.it/1000/500");
+background-size: cover;
+color: white;
+padding: 120px 0;
+}
+.banner h1 {
+font-size: 38px;
+}
+.banner p {
+font-size: 30px;
+font-style: italic;
+font-weight: lighter;
+opacity: 0.8;
+}
+.container {
+width: 700px;
+margin: 50px auto;
+}
