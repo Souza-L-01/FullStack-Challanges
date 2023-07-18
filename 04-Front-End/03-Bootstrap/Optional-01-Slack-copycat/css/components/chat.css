@@ -5,6 +5,17 @@
 	flex-direction: column;
 }
 
+.chat-header {
+	border-bottom: 1px solid rgb(240,240,240);
+}
+
+.chat-header h1 {
+	font-size: 24px;
+}
+
+.chat-header i {
+	font-size: 20px;
+}
 
 .chat-conversations {
 	flex-grow: 1;
