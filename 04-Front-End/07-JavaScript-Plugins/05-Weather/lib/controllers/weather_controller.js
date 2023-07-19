@@ -23,4 +23,17 @@ export default class extends Controller {
         .then(data => this.#updateCard(data))
     })
   }
+
+  #updateCard(data) {
+    this.iconTarget.src = `https://openweathermap.org/img/w/${data.weather[0].icon}.png`
+    this.temperatureTarget.innerText = `${Math.round(data.main.temp)} °C`
+    this.descriptionTarget.innerText = data.weather[0].description
+    this.cityTarget.innerText = data.name
+    const today = new Date();
+    const localOffset = data.timezone + today.getTimezoneOffset() * 60
+    const localDate = new Date(today.setUTCSeconds(localOffset))
+    const options = { weekday: 'long', month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric' }
+    const formattedDate = localDate.toLocaleDateString("en-US", options)
+    this.dateTarget.innerText = formattedDate
+  }
 }
