@@ -7,4 +7,12 @@ export default class extends Controller {
     this.apiKey = "YOUR-API-KEY"
   }
 
+  fetchWeather(event) {
+    event.preventDefault()
+    const city = this.inputTarget.value
+    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${this.apiKey}&units=metric`)
+      .then(response => response.json())
+      .then(data => this.#updateCard(data))
+  }
+
   }
