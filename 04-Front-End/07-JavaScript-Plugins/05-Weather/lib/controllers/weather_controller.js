@@ -15,4 +15,12 @@ export default class extends Controller {
       .then(data => this.#updateCard(data))
   }
 
+  fetchWeatherByCoordinates(event) {
+    event.preventDefault()
+    navigator.geolocation.getCurrentPosition((data) => {
+      fetch(`http://api.openweathermap.org/data/2.5/weather?lat=${data.coords.latitude}&lon=${data.coords.longitude}&appid=${this.apiKey}&units=metric`)
+        .then(response => response.json())
+        .then(data => this.#updateCard(data))
+    })
   }
+}
