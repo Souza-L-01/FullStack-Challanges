@@ -4,7 +4,7 @@ export default class extends Controller {
   static targets = ["input", "city", "date", "description", "temperature", "icon"]
 
   initialize() {
-    this.apiKey = "API-KEY"
+    this.apiKey = "YOUR-API-KEY"
   }
 
-}
+  }
