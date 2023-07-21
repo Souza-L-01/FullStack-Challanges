@@ -11,4 +11,8 @@ class Post
     @read = attributes[:read] == "true"
   end
 
+  def read?
+    @read
+  end
+
 end
