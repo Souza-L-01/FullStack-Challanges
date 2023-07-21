@@ -17,5 +17,9 @@ class Author
     post.author = self
   end
 
+  def unread_posts
+    @posts.reject(&:read?)
+  end
 
+  
 end
