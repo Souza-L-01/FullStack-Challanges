@@ -21,5 +21,9 @@ class Author
     @posts.reject(&:read?)
   end
 
+  def to_s
+    "#{@name} (#{@nickname})\n\n#{@description}\n\n#{engagement}"
+  end
+
   
 end
