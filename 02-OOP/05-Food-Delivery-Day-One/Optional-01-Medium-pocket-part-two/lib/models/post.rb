@@ -15,4 +15,8 @@ class Post
     @read
   end
 
+  def to_s
+    "#{title}\n\n#{author}\n\n#{content}"
+  end
+
 end
