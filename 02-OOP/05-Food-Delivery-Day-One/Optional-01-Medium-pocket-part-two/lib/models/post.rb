@@ -1,6 +1,6 @@
 class Post
-attr_reader :title, :path, :content
-attr_accessor :id, :author
+  attr_reader :title, :path, :content
+  attr_accessor :id, :author
 
   def initialize(attributes = {})
     @id = attributes[:id].to_i
