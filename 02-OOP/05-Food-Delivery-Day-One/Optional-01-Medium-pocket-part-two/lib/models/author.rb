@@ -25,5 +25,11 @@ class Author
     "#{@name} (#{@nickname})\n\n#{@description}\n\n#{engagement}"
   end
 
-  
+  private
+
+  def engagement
+    posts_published_pluralized = @posts_published == 1 ? "post published" : "posts published"
+    comments_written_pluralized = @comments_written == 1 ? "comment written" : "comments written"
+    "#{@posts_published} #{posts_published_pluralized} - #{@comments_written} #{comments_written_pluralized}"
+  end
 end
