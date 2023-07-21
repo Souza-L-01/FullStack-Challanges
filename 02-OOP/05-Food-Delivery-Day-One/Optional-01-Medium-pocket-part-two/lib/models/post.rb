@@ -19,4 +19,7 @@ class Post
     "#{title}\n\n#{author}\n\n#{content}"
   end
 
+  def mark_as_read!
+    @read = true
+  end
 end
