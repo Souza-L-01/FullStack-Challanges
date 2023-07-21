@@ -1,5 +1,8 @@
 class Author
-    def initialize(attributes = {})
+  attr_accessor :id
+  attr_reader :name, :description, :posts_published, :comments_written, :nickname, :posts
+
+  def initialize(attributes = {})
     @id = attributes[:id].to_i
     @name = attributes[:name]
     @nickname = attributes[:nickname]
