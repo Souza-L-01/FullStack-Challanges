@@ -8,4 +8,8 @@ class AuthorRepository
     @next_id = 1
     load_csv
   end
+
+  def find(id)
+    @authors.find { |author| author.id == id }
+  end
 end
