@@ -21,4 +21,8 @@ class AuthorRepository
     return author
   end
 
+  def find_by_nickname(nickname)
+    @authors.find { |author| author.nickname == nickname }
+  end
+
 end
