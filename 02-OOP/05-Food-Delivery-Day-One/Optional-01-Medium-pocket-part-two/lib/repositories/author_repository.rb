@@ -29,4 +29,9 @@ class AuthorRepository
     @authors[index]
   end
 
+  def all
+    @authors
+  end
+
+  
 end
