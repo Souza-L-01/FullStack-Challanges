@@ -25,4 +25,8 @@ class AuthorRepository
     @authors.find { |author| author.nickname == nickname }
   end
 
+  def find_by_index(index)
+    @authors[index]
+  end
+
 end
