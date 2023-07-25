@@ -33,5 +33,14 @@ class AuthorRepository
     @authors
   end
 
+  private
+
+  def load_csv
+    CSV.foreach(@csv_path, headers: :first_row, header_converters: :symbol) do |row|
+      @authors << Author.new(row)
+    end
+    @next_id = @authors.last.id + 1 unless @authors.empty?
+  end
+
   
 end
