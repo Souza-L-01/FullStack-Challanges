@@ -42,5 +42,13 @@ class AuthorRepository
     @next_id = @authors.last.id + 1 unless @authors.empty?
   end
 
-  
+  def save
+    CSV.open(@csv_path, 'wb') do |csv|
+      csv << ["id", "name", "description", "posts_published", "comments_written", "nickname"]
+      @authors.each do |author|
+        csv << [author.id, author.name, author.description,
+                author.posts_published, author.comments_written, author.nickname]
+      end
+    end
+  end
 end
