@@ -20,4 +20,8 @@ class PostRepository
     save
   end
 
- end
+  def find_by_index(index)
+    @posts[index]
+  end
+
+end
