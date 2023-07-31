@@ -29,4 +29,6 @@ class PostRepository
     save
   end
 
+  private
+
 end
