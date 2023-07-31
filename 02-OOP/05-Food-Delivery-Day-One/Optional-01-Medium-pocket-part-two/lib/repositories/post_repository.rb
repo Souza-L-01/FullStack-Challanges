@@ -32,16 +32,13 @@ class PostRepository
   private
 
   def load_csv
-
+    CSV.foreach(@csv_file, headers: :first_row, header_converters: :symbol) do |row|
+      post = Post.new(row)
+      @posts << post
+      author = @author_repo.find(row[:author_id].to_i)
+      author.add_post(post)
+    end
     @next_id = @posts.last.id + 1 unless @posts.empty?
   end
 
-  def save
-    CSV.open(@csv_file, "wb") do |csv|
-      csv << ["id", "path", "title", "content", "author_id", "read"]
-      @posts.each do |post|
-        csv << [post.id, post.path, post.title, post.content, post.author.id, post.read?]
-      end
-    end
-  end
 end
