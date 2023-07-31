@@ -14,4 +14,10 @@ class PostRepository
     @posts
   end
 
-end
+  def add(post)
+    post.id = @next_id
+    @posts << post
+    save
+  end
+
+ end
