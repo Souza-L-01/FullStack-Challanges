@@ -41,4 +41,12 @@ class PostRepository
     @next_id = @posts.last.id + 1 unless @posts.empty?
   end
 
+  def save
+    CSV.open(@csv_file, "wb") do |csv|
+      csv << ["id", "path", "title", "content", "author_id", "read"]
+      @posts.each do |post|
+        csv << [post.id, post.path, post.title, post.content, post.author.id, post.read?]
+      end
+    end
+  end
 end
