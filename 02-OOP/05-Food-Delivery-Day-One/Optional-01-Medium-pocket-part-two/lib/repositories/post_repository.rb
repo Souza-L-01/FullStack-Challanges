@@ -24,4 +24,9 @@ class PostRepository
     @posts[index]
   end
 
+  def mark_as_read(index)
+    @posts[index].mark_as_read!
+    save
+  end
+
 end
