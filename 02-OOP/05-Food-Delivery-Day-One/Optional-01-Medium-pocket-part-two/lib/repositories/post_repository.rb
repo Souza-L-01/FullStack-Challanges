@@ -9,4 +9,9 @@ class PostRepository
     @next_id = 1
     load_csv
   end
+
+  def all
+    @posts
+  end
+
 end
