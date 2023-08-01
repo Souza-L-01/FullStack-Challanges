@@ -10,6 +10,11 @@ class ReaderScraper
   def initialize(path)
     @path = path
   end
-  
+
+  def call
+    post = scrape_post
+    author = scrape_author
+    return { post: post, author: author }
+  end
 
 end
