@@ -41,5 +41,4 @@ class ReaderScraper
       doc.search('/sidebar-data div:nth-child(2)').first.text.match(/(?<number>\d+)/)[:number]
     return Author.new(attribute)
   end
-
 end
