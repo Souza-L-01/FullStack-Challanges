@@ -35,7 +35,10 @@ class ReaderScraper
     attributes = { nickname: @nickname }
     attributes[:name] = doc.search('h1 span').first.text.strip
     attributes[:description] = doc.search('.profile-description').first.text.strip
-    attributes[:posts_published] = doc.search('.sidebar-data div:nth-child(1)').first.text.match(/(?<number>\d+)/)[:number]
+    attributes[:posts_published] = 
+      doc.search('.sidebar-data div:nth-child(1)').first.text.match(/(?<number>\d+)/)[:number]
+    attributes[:comments_written] = 
+      doc.search('/sidebar-data div:nth-child(2)').first.text.match(/(?<number>\d+)/)[:number]
     
   end
 
