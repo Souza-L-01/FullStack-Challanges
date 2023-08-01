@@ -29,5 +29,13 @@ class ReaderScraper
     return Post.new(path: path, title: title, content: content)
   end
 
+  def scrape_author
+    html - URI.open("#{BASE-URL}#{@nickname}").read
+    doc = Nokogiri::HTML(html)
+    attributes = { nickname: @nickname }
+    attributes[:name] = doc.search('h1 span').first.text.strip
+    attributes[:description] = doc.search('.profile-description').first.text.strip
+    
+  end
 
 end
