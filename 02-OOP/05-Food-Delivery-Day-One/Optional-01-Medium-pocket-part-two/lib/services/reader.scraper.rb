@@ -19,4 +19,15 @@ class ReaderScraper
 
   private
 
+  def scrape_post
+    html = URI.open("#{BASE_URL}#{@path}").read
+    doc = Nokogiri::HTML(html)
+    title = doc.search("h1").first.text.strip
+    paragraphs = doc.search("#article-body p")
+    content = paragraphs.map(&:text).join("\n\n")
+    @nickname = doc.search(".crayons-article__subheader a"). attribute("href").value.delete_prefix!("/")
+    return Post.new(path: path, title: title, content: content)
+  end
+
+
 end
