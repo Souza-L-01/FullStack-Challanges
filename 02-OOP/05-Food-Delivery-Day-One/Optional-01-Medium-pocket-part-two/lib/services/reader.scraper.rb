@@ -7,5 +7,9 @@ require_relative "../models/author"
 class ReaderScraper
   BASE_URL = "https://dev.to/".freeze
 
+  def initialize(path)
+    @path = path
+  end
   
+
 end
