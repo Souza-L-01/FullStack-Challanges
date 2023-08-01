@@ -39,7 +39,7 @@ class ReaderScraper
       doc.search('.sidebar-data div:nth-child(1)').first.text.match(/(?<number>\d+)/)[:number]
     attributes[:comments_written] = 
       doc.search('/sidebar-data div:nth-child(2)').first.text.match(/(?<number>\d+)/)[:number]
-    
+    return Author.new(attribute)
   end
 
 end
