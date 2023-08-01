@@ -17,4 +17,6 @@ class ReaderScraper
     return { post: post, author: author }
   end
 
+  private
+
 end
