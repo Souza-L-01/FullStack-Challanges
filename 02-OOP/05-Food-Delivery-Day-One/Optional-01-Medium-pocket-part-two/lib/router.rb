@@ -35,5 +35,17 @@ class Router
   end
 
   def route(action)
-
+    case action
+    when 1 then @posts_controller.index
+    when 2 then @posts_controller.create
+    when 3 then @posts_controller.show
+    when 4 then @posts_controller.mark_as_read
+    when 5 then @authors_controller.index
+    when 6 then @authors_controller.posts
+    when 7 then @authors_controller.show
+    when 8 then @running = false
+    else
+      puts "Please, try again"
+    end
+  end
 end
