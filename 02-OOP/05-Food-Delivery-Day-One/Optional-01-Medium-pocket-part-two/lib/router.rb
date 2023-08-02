@@ -17,6 +17,7 @@ class Router
     end
     puts "Goodbye!"
   end
-
   
+  private
+
 end
