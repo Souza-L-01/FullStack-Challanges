@@ -5,7 +5,18 @@ class Router
     @running = true
   end
 
-  def
+  def run
+    puts "-------------------------"
+    puts "Welcome to your DEV Pocket Reader"
+    puts "-------------------------\n\n"
+    while @running
+      display_menu
+      action = gets.chomp.to_i
+      print 'clear'
+      route(action)
+    end
+    puts "Goodbye!"
   end
 
+  
 end
