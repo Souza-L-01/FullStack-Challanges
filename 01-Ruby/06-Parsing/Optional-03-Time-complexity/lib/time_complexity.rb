@@ -14,5 +14,14 @@ def find_book_enhanced(books, book_to_find)
   # Use binary search routine
   from = 0
   to = books.length - 1
- 
+  while from <= to
+    pivot = (from + to) / 2
+    if book_to_find > books[pivot]
+      from = pivot + 1
+    elsif book_to_find < books[pivot]
+      to = pivot - 1
+    else
+      return pivot
+    end
+  end
 end
