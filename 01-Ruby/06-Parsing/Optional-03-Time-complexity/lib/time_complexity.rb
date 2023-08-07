@@ -24,4 +24,6 @@ def find_book_enhanced(books, book_to_find)
       return pivot
     end
   end
+  return nil
 end
+
