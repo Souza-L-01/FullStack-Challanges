@@ -26,4 +26,29 @@ def find_book_enhanced(books, book_to_find)
   end
   return nil
 end
+# rubocop:enable Metrics/MethodLength
 
+# # Solution with bsearch_index
+# def find_book_enhanced(books, book_to_find)
+#   # TODO: return index of `book_to_find` in the array of `books`
+#   books.bsearch_index do |book|
+#     book_to_find <=> book
+#   end
+# end
+
+# # Solution with recursion
+# def find_book_enhanced(books, book_to_find, previous_index = 0)
+#   # TODO: return index of `book_to_find` in the array of `books`
+#   # Use binary search
+#   return nil if books.size == 1 && books[0] != book_to_find
+
+#   index = books.size / 2
+#   if books[index] == book_to_find
+#     return previous_index + index
+#   elsif books[index] > book_to_find
+#     find_book_enhanced(books[0..(index - 1)], book_to_find, previous_index)
+#   else
+#     previous_index += index + 1
+#     find_book_enhanced(books[(index + 1)..], book_to_find, previous_index)
+#   end
+# end
